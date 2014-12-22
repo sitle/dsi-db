@@ -1,0 +1,7 @@
+name 'dsi-db'
+maintainer 'Leonard TAVAE'
+maintainer_email 'leonard.tavae@informatique.gov.pf'
+license 'Apache 2.0'
+description 'Installs/Configures dsi-db'
+long_description 'Installs/Configures dsi-db'
+version '0.1.0'
