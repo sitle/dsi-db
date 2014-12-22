@@ -50,4 +50,18 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ]
     end
   end
+
+  config.vm.define 'db4', autostart: false do |queue|
+    queue.vm.hostname = 'db4'
+    queue.vm.box = VAGRANT_BOX
+    queue.vm.network 'private_network', ip: '172.28.128.7'
+    queue.berkshelf.enabled = true
+    queue.vm.provision :chef_solo do |chef|
+      chef.json = {
+      }
+      chef.run_list = [
+        'recipe[dsi-db::default]'
+      ]
+    end
+  end
 end
