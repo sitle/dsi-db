@@ -5,3 +5,7 @@ license 'Apache 2.0'
 description 'Installs/Configures dsi-db'
 long_description 'Installs/Configures dsi-db'
 version '0.1.0'
+
+depends 'percona'
+depends 'keepalived'
+depends 'haproxy'
